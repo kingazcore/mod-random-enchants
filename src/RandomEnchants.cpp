@@ -35,6 +35,15 @@ public:
             RollPossibleEnchant(player, item);
     }
 
+    void OnAfterStoreOrEquipNewItem(Player *player, uint32 /*vendorslot*/, Item *item, uint8 /*count*/, uint8 /*bag*/,
+                                    uint8 /*slot*/, ItemTemplate const * /*pProto*/, Creature * /*pVendor*/,
+                                    VendorItem const * /*crItem*/, bool /*bStore*/) override {
+        if (sConfigMgr->GetOption<bool>("RandomEnchants.OnBuyNewItem", true) && sConfigMgr->GetOption<bool>("RandomEnchants.Enable", true)){
+            RollPossibleEnchant(player, item);
+        }
+    };
+
+
     void OnQuestRewardItem(Player* player, Item* item, uint32 /*count*/) override {
         if (sConfigMgr->GetOption<bool>("RandomEnchants.OnQuestReward", true) && sConfigMgr->GetOption<bool>("RandomEnchants.Enable", true))
             RollPossibleEnchant(player, item);

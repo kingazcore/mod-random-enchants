@@ -17,7 +17,7 @@ RandomEnchants.Enable = 1
 #        Announce a message on login for this module
 #        Default:     1
 
-RandomEnchants.AnnounceOnLogin=1
+RandomEnchants.AnnounceOnLogin=0
 
 #
 #     RandomEnchants.OnLoginMessage
@@ -54,22 +54,29 @@ RandomEnchants.OnQuestReward=1
 
 RandomEnchants.OnGroupRoll = 1
 
+#
+#     RandomEnchants.OnBuyNewItem
+#        Chance at random enchant on store or equip new item
+#        Default:     1
+
+RandomEnchants.OnBuyNewItem = 1
+
 #     RandomEnchants.EnchantChance1
 #        Probability (in percentage) for the first enchant to be applied.
 #        Default:     70.0
 
-RandomEnchants.EnchantChance1=70.0
+RandomEnchants.EnchantChance1=100.0
 
 #
 #     RandomEnchants.EnchantChance2
 #        Probability (in percentage) for the second enchant to be applied (only if the first enchant is applied).
 #        Default:     65.0
 
-RandomEnchants.EnchantChance2=65.0
+RandomEnchants.EnchantChance2=100.0
 
 #
 #     RandomEnchants.EnchantChance3
 #        Probability (in percentage) for the third enchant to be applied (only if the second enchant is applied).
 #        Default:     60.0
 
-RandomEnchants.EnchantChance3=60.0
+RandomEnchants.EnchantChance3=100.0
